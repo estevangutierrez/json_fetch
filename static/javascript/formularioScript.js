@@ -40,11 +40,11 @@ function enviarAPI(datos) {
 
         if (data.existeUsuario == true){
             Swal.fire('Usuario Existente','Este usuario ya existe en el sistema','error');
-        }
-            
-        if (data.existeUsuario == false){
+        } else {
             Swal.fire('Genial','Los datos se han guardado','success');
-            window.location.reload();
+            nombre.value = '';
+            cedula.value = '';
+            ubicacion.value = '';
         }
     })
     .catch(error => {
